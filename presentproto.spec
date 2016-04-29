@@ -4,7 +4,7 @@
 #
 Name     : presentproto
 Version  : 1.0
-Release  : 4
+Release  : 5
 URL      : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.0.tar.gz
 Source0  : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.0.tar.gz
 Summary  : Present extension headers
