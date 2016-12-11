@@ -4,7 +4,7 @@
 #
 Name     : presentproto
 Version  : 1.0
-Release  : 6
+Release  : 7
 URL      : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.0.tar.gz
 Source0  : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.0.tar.gz
 Summary  : Present extension headers
@@ -19,6 +19,7 @@ No detailed description available
 %package dev
 Summary: dev components for the presentproto package.
 Group: Development
+Provides: presentproto-devel
 
 %description dev
 dev components for the presentproto package.
@@ -36,10 +37,15 @@ doc components for the presentproto package.
 %setup -q -n presentproto-1.0
 
 %build
+export LANG=C
 %configure --disable-static
-make V=1 %{?_smp_mflags}
+make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
@@ -53,7 +59,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/include/X11/extensions/presentproto.h
 /usr/include/X11/extensions/presenttokens.h
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/pkgconfig/presentproto.pc
 
 %files doc
 %defattr(-,root,root,-)
