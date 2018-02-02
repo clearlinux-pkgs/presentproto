@@ -6,7 +6,7 @@
 #
 Name     : presentproto
 Version  : 1.1
-Release  : 10
+Release  : 11
 URL      : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.1.tar.gz
 Source0  : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.1.tar.gz
 Source99 : http://xorg.freedesktop.org/releases/individual/proto/presentproto-1.1.tar.gz.sig
